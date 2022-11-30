@@ -11,6 +11,11 @@ setGridButton.addEventListener('click', getSqPerSide);
 
 function getSqPerSide() {
 
+    // reset old Tiles background
+const oldTiles = document.querySelectorAll('.sketch-tile');
+oldTiles.forEach(oldTile => {
+    oldTile.style = 'background: #c3c3c3';
+});
     //get correct number
 
 	sqPerSide = +prompt('How many squares per side? (min: 2, max: 100)');
